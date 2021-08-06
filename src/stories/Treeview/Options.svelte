@@ -1,6 +1,7 @@
 <script>
- import {Treeview} from '@bexis2/svelte-bexis2-core-ui'
+ import {Treeview} from '@bexis2/svelte-bexis2-core-ui';
  import data from './data.json'
+
 
  let target ="_blank";
 

@@ -13,7 +13,7 @@
 />
 
 <Story name="Default" >
- <Example title="Inputs" source={sourceInputs}>
+ <Example title="Inputs" svelte={sourceInputs}>
   <Inputs/> 
   <span slot="info">
    This story shows input examples.
@@ -25,7 +25,7 @@
  </Story>
 
  <Story name="Validation" >
-  <Example title="Validation" source={sourceValidation}>
+  <Example title="Validation" svelte={sourceValidation}>
    <Validation/> 
    <span slot="info">
     This story shows validation examples.

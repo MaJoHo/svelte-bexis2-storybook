@@ -16,14 +16,14 @@
  component={DataTable}
 />
 
-<Story name="Default Table"  >
-<Example title="Default" source={sourceDefault}>
+<Story name="Default Table" stacked >
+<Example title="Default" svelte={sourceDefault} stacked>
  <Default/> 
 </Example>
 </Story>
 
 <Story name="Default Table2"  >
- <Example title="Default2" source={sourceDataTable}>
+ <Example title="Default2" svelte={sourceDataTable} stacked>
   <DataTable/> 
  </Example>
 </Story>

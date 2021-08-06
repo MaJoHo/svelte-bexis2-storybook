@@ -17,7 +17,7 @@
 />
 
 <Story name="Colors"  >
-<Example title="Color" source={sourceColor}>
+<Example title="Color" svelte={sourceColor}>
  <Color/> 
  <span slot="info">
   This story shows all the colors of the different buttons.
@@ -26,7 +26,7 @@
 </Story>
 
 <Story name="Size"  >
- <Example title="Size" source={sourceSize}>
+ <Example title="Size" svelte={sourceSize}>
   <Size/> 
   <span slot="info">
    Easy change size.
@@ -35,7 +35,7 @@
  </Story>
 
 <Story name="Icon"  >
- <Example title="Icon" source={sourceIcon}>
+ <Example title="Icon" svelte={sourceIcon}>
   <Icon/> 
   <span slot="info">
    Button with icons are used as grid functions in bexis 2.

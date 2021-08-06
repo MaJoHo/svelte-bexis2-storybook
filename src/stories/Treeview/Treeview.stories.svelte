@@ -1,15 +1,17 @@
-TreeView.stories.svelte
+<!-- TreeView.stories.svelte -->
 
 <script>
  import { Meta, Template, Story } from '@storybook/addon-svelte-csf';
-
-//  import {Treeview} from '@bexis2/svelte-bexis2-core-ui/';
- import {Button} from '@bexis2/svelte-bexis2-core-ui/';
+ import {Treeview} from '@bexis2/svelte-bexis2-core-ui';
+ 
  import Data from './Data.svelte';
  import sourceData from '!!raw-loader!./Data.svelte';
  import Options from './Options.svelte';
  import sourceOption from '!!raw-loader!./Options.svelte';
  import Example from '../Example.svelte'
+
+ import sourceCSharp from '!!raw-loader!./test.cs'
+ import sourceJSON from '!!raw-loader!./data.txt'
 
  let argTypes={
     data: { control: "object" },
@@ -59,14 +61,17 @@ TreeView.stories.svelte
 
 </script>
 
-
 <Meta title="Bexis2/Treeview" 
-component={Button}
+component={Treeview} 
+argTypes={argTypes}
 />
 
-<!-- 
+<Template let:args>
+ <Treeview {...args}/>
+</Template>
+
 <Story name="Data">
- <Example title="Data" source={sourceData}>
+ <Example title="Data" svelte={sourceData} csharp={sourceCSharp} json={sourceJSON}>
   <Data /> 
   <p slot="info">
    This story shows all the colors of the different buttons.
@@ -75,17 +80,15 @@ component={Button}
  </Story>
 
  <Story name="Option"  >
-  <Example title="Option" source={sourceOption}>
+  <Example title="Option" svelte={sourceOption} json={sourceJSON}>
    <Options/> 
    <span slot="info">
     This story shows all the colors of the different buttons.
    </span>
   </Example>
-  </Story> -->
-
-  <Story name="Playground">
-    <Button></Button>
   </Story>
+
+  <Story name="Playground"></Story>
 
 
 

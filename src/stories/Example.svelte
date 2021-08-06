@@ -1,8 +1,11 @@
 <script >
- import { Col, Row } from 'sveltestrap';
+ import { Col, Row, TabContent, TabPane } from 'sveltestrap';
  import PrismCode from './PrismCode.svelte'
  export let stacked = false;
- export let source;
+ export let svelte;
+ export let csharp ;
+ export let model;
+ export let json;
  export let title;
 </script>
 
@@ -15,15 +18,42 @@
   <slot name="external" ></slot>
  </div>
  <div class="border p-3">
-   <h6 class="text-muted">EXAMPLE</h6>
+  <Row>
+    <Col md={stacked ? 12 : 5}>
+    
+    </Col>
+    <Col md={stacked ? 12 : 5}>
+      
+      </Col>
+  </Row>
    <Row>
      <Col md={stacked ? 12 : 5}>
+       <h6 class="text-muted">EXAMPLE</h6>
        <slot />
      </Col>
-     {#if source}
+     {#if svelte}
        <Col md={stacked ? 12 : 7}>
-        <PrismCode class="language-html h-100">{source}</PrismCode>
-        <PrismCode class="language-aspnet h-100">private class text</PrismCode>
+        <!-- <h6 class="text-muted">CODE</h6> -->
+        <TabContent pills >
+          <TabPane tabId="svelte" tab="Svelte" active>
+            <PrismCode class="language-html" >{svelte}</PrismCode>
+          </TabPane>
+          {#if json}
+            <TabPane tabId="json" tab="JSON" active>
+              <PrismCode class="language-json" >{json}</PrismCode>
+            </TabPane>
+          {/if}
+          {#if csharp}
+            <TabPane tabId="csharp" tab="C#" active>
+              <PrismCode class="language-csharp" >{csharp}</PrismCode>
+            </TabPane>
+          {/if}
+          {#if model}
+            <TabPane tabId="csharp model" tab="C# Model" active>
+              <PrismCode class="language-csharp" >{model}</PrismCode>
+            </TabPane>
+          {/if}
+        </TabContent>
        </Col>
      {/if}
    </Row>

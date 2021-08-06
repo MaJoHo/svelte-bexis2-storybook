@@ -13,7 +13,7 @@
 />
 
 <Story name="Set" >
- <Example title="Set Icon" source={sourceSet}>
+ <Example title="Set Icon" svelte={sourceSet}>
   <Set/> 
   <span slot="info">
    This story shows how to set a Icon.
@@ -26,7 +26,7 @@
  </Story>
 
  <Story name="UsedIcons" >
-  <Example title="UsedIcons" source={sourceUsedIcons}>
+  <Example title="UsedIcons" svelte={sourceUsedIcons}>
    <UsedIcons/> 
    <span slot="info">
     This story shows alle used icons in bexis 2.

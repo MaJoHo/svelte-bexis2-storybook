@@ -6,12 +6,18 @@
  
  import Data from './Data.svelte';
  import sourceData from '!!raw-loader!./Data.svelte';
+ import Events from './Events.svelte';
+ import sourceEvents from '!!raw-loader!./Events.svelte';
  import Options from './Options.svelte';
  import sourceOption from '!!raw-loader!./Options.svelte';
+
  import Example from '../Example.svelte'
 
- import sourceCSharp from '!!raw-loader!./test.cs'
  import sourceJSON from '!!raw-loader!./data.txt'
+ import ServerSide from './serverside/ServerSide.svelte'
+ import sourceServerSideSvelte from '!!raw-loader!./serverside/ServerSide.svelte'
+ import sourceServerSideCSharp from '!!raw-loader!./serverside/server.cs'
+ import sourceServerSideModel from '!!raw-loader!./serverside/model.cs'
 
  let argTypes={
     data: { control: "object" },
@@ -71,10 +77,10 @@ argTypes={argTypes}
 </Template>
 
 <Story name="Data">
- <Example title="Data" svelte={sourceData} csharp={sourceCSharp} json={sourceJSON}>
+ <Example title="Data" svelte={sourceData} json={sourceJSON}>
   <Data /> 
   <p slot="info">
-   This story shows all the colors of the different buttons.
+   How to structure the data for the treeview.
   </p>
  </Example>
  </Story>
@@ -83,9 +89,32 @@ argTypes={argTypes}
   <Example title="Option" svelte={sourceOption} json={sourceJSON}>
    <Options/> 
    <span slot="info">
-    This story shows all the colors of the different buttons.
+    How to setup the options.
    </span>
   </Example>
+  </Story>
+
+  <Story name="Events"  >
+    <Example title="Events" svelte={sourceEvents} json={sourceJSON}>
+     <Events/> 
+     <span slot="info">
+      How to use events.
+     </span>
+    </Example>
+    </Story>
+
+  <Story name="Serverside data loading" >
+    <Example title="Serverside data loading" 
+      svelte={sourceServerSideSvelte} 
+      csharp={sourceServerSideCSharp} 
+      model = {sourceServerSideModel}
+      codeonly
+      stacked>
+     <!-- <ServerSide/>  -->
+     <span slot="info">
+      How to load data from server with a bexis 2 ui model.
+     </span>
+    </Example>
   </Story>
 
   <Story name="Playground"></Story>

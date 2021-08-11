@@ -7,7 +7,10 @@
  export let model;
  export let json;
  export let title;
+ export let codeonly = false;
 </script>
+
+
 
 <div class="py-3">
  {#if title}
@@ -27,10 +30,12 @@
       </Col>
   </Row>
    <Row>
+     {#if !codeonly}
      <Col md={stacked ? 12 : 5}>
        <h6 class="text-muted">EXAMPLE</h6>
        <slot />
      </Col>
+     {/if}
      {#if svelte}
        <Col md={stacked ? 12 : 7}>
         <!-- <h6 class="text-muted">CODE</h6> -->
@@ -39,17 +44,17 @@
             <PrismCode class="language-html" >{svelte}</PrismCode>
           </TabPane>
           {#if json}
-            <TabPane tabId="json" tab="JSON" active>
+            <TabPane tabId="json" tab="JSON" >
               <PrismCode class="language-json" >{json}</PrismCode>
             </TabPane>
           {/if}
           {#if csharp}
-            <TabPane tabId="csharp" tab="C#" active>
+            <TabPane tabId="csharp" tab="C#" >
               <PrismCode class="language-csharp" >{csharp}</PrismCode>
             </TabPane>
           {/if}
           {#if model}
-            <TabPane tabId="csharp model" tab="C# Model" active>
+            <TabPane tabId="csharp model" tab="C# Model" >
               <PrismCode class="language-csharp" >{model}</PrismCode>
             </TabPane>
           {/if}
@@ -59,3 +64,9 @@
    </Row>
  </div>
 </div>
+
+<style>
+  .nav-item{
+    margin:0px;
+  }
+</style>

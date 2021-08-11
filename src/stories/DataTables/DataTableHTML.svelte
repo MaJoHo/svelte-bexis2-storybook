@@ -2,13 +2,11 @@
 	import jQuery from 'jquery'
 	import { onMount, tick } from 'svelte'
 	import { load } from './data.js'
-    import { Button } from "sveltestrap";
-    import { library } from '@fortawesome/fontawesome-svg-core';
-    import { fas } from '@fortawesome/free-solid-svg-icons';
-   // import { far } from '@fortawesome/free-regular-svg-icons';
-  //  import { fab } from '@fortawesome/free-brands-svg-icons';
-    import { FontAwesomeIcon } from 'fontawesome-svelte';
-    library.add(fas);
+  import { Button } from "sveltestrap";
+  import { library } from '@fortawesome/fontawesome-svg-core';
+  import { fas } from '@fortawesome/free-solid-svg-icons';
+  import { FontAwesomeIcon } from 'fontawesome-svelte';
+  library.add(fas);
 
 	let el // table element
 	let table // table object (API)

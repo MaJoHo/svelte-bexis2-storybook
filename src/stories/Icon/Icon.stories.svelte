@@ -20,7 +20,7 @@
   </span>
    <div slot="external" style="margin:1rem 0;" >
     <a href="https://fontawesome.com/v5.15/icons?d=gallery&p=2&s=solid&m=free" target="_blank">Free Solid Awesome Font Icons v5</a> <br/>
-    <a href="https://www.npmjs.com/package/svelte-fa" target="blank" >more informations</a>
+    <a href="https://www.npmjs.com/package/svelte-fa" target="blank" >https://www.npmjs.com/package/svelte-fa</a>
    </div>    
  </Example>
  </Story>
@@ -33,7 +33,7 @@
    </span>
     <div slot="external" style="margin:1rem 0;" >
      <a href="https://fontawesome.com/v5.15/icons?d=gallery&p=2&s=solid&m=free" target="_blank">Free Solid Awesome Font Icons v5</a> <br/>
-     <a href="https://www.npmjs.com/package/svelte-fa" target="blank" >more informations</a>
+     <a href="https://www.npmjs.com/package/svelte-fa" target="blank" >https://www.npmjs.com/package/svelte-fa</a>
     </div>    
   </Example>
   </Story>

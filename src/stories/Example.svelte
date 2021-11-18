@@ -6,6 +6,7 @@
  export let csharp ;
  export let model;
  export let json;
+ export let xml;
  export let title;
  export let codeonly = false;
 </script>
@@ -58,6 +59,11 @@
               <PrismCode class="language-csharp" >{model}</PrismCode>
             </TabPane>
           {/if}
+          {#if model}
+          <TabPane tabId="xml" tab="xml" >
+            <PrismCode class="language-xml" >{xml}</PrismCode>
+          </TabPane>
+        {/if}
         </TabContent>
        </Col>
      {/if}

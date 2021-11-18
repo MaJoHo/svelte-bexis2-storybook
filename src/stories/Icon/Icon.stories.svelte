@@ -26,7 +26,7 @@
  </Story>
 
  <Story name="UsedIcons" >
-  <Example title="UsedIcons" svelte={sourceUsedIcons}>
+  <Example title="Used Icons" svelte={sourceUsedIcons}>
    <UsedIcons/> 
    <span slot="info">
     This story shows alle used icons in bexis 2.

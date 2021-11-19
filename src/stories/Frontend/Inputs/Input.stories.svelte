@@ -4,11 +4,11 @@
  import sourceInputs from '!!raw-loader!./Inputs.svelte'
  import Validation from './Validation.svelte'
  import sourceValidation from '!!raw-loader!./Validation.svelte'
- import Example from '../Example.svelte'
+ import Example from '../../Example.svelte'
 
 </script>
 
-<Meta title="Bexis2/Inputs" 
+<Meta title="Bexis2/Frontend/Inputs" 
  component={Inputs}
 />
 

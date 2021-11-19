@@ -61,7 +61,7 @@
               <PrismCode class="language-csharp" >{model}</PrismCode>
             </TabPane>
           {/if}
-          {#if model}
+          {#if xml}
           <TabPane tabId="xml" tab="xml" >
             <PrismCode class="language-xml" >{xml}</PrismCode>
           </TabPane>

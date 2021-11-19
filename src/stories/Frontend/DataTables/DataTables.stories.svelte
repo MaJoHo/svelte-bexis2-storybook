@@ -12,11 +12,11 @@
  import sourceServerSideCSharp  from '!!raw-loader!./ServerSide/Server.cs'
  import sourceServerSideModel  from '!!raw-loader!./ServerSide/Model.cs'
 
- import Example from '../Example.svelte'
+ import Example from '../../Example.svelte'
 
 </script>
 
-<Meta title="Bexis2/DataTable" 
+<Meta title="Bexis2/Frontend/DataTable" 
  component={DataTable}
 />
 

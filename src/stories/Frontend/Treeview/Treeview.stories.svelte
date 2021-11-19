@@ -11,7 +11,7 @@
  import Options from './Options.svelte';
  import sourceOption from '!!raw-loader!./Options.svelte';
 
- import Example from '../Example.svelte'
+ import Example from '../../Example.svelte'
 
  import sourceJSON from '!!raw-loader!./data.txt'
  import ServerSide from './serverside/ServerSide.svelte'
@@ -20,9 +20,9 @@
  import sourceServerSideModel from '!!raw-loader!./serverside/model.cs'
 
  let argTypes={
-    data: { control: {disable:true} },
-    showcheckbox: { control: {disable:true} },
-    showcount: { control:{disable:true}}
+    data: { control: "object" },
+    showcheckbox: { control: "boolean" },
+    showcount: { control: "boolean" }
   }
 
 
@@ -64,53 +64,18 @@
 
 </script>
 
-<Meta title="Bexis2/Treeview/Examples" 
-component={Treeview}
+<Meta title="Bexis2/Frontend/Treeview" 
+component={Treeview} 
 argTypes={argTypes}
 />
 
-<Template >
-  <Treeview/>
- </Template>
+<Template let:args>
+ <Treeview {...args}/>
+</Template>
+
+<Story name="Playground">
+  
+</Story>
 
 
-<Story name="Data" >
- <Example title="Data" svelte={sourceData} json={sourceJSON}>
-  <Data /> 
-  <p slot="info">
-   How to structure the data for the treeview.
-  </p>
- </Example>
- </Story>
 
- <Story name="Option"  >
-  <Example title="Option" svelte={sourceOption} json={sourceJSON}>
-   <Options/> 
-   <span slot="info">
-    How to setup the options.
-   </span>
-  </Example>
-  </Story>
-
-  <Story name="Events"  >
-    <Example title="Events" svelte={sourceEvents} json={sourceJSON}>
-     <Events/> 
-     <span slot="info">
-      How to use events.
-     </span>
-    </Example>
-    </Story>
-
-  <Story name="Serverside data loading" >
-    <Example title="Serverside data loading" 
-      svelte={sourceServerSideSvelte} 
-      csharp={sourceServerSideCSharp} 
-      model = {sourceServerSideModel}
-      codeonly
-      stacked>
-     <!-- <ServerSide/>  -->
-     <span slot="info">
-      How to load data from server with a bexis 2 ui model.
-     </span>
-    </Example>
-  </Story>

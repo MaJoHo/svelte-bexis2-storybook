@@ -4,11 +4,11 @@
  import sourceSet from '!!raw-loader!./Set.svelte'
  import UsedIcons from './UsedIcons.svelte'
  import sourceUsedIcons from '!!raw-loader!./UsedIcons.svelte'
- import Example from '../Example.svelte'
+ import Example from '../../Example.svelte'
 
 </script>
 
-<Meta title="Bexis2/Icon" 
+<Meta title="Bexis2/Frontend/Icon" 
  component={Set}
 />
 

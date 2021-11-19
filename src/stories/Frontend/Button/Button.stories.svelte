@@ -8,11 +8,11 @@
  import sourceColor  from '!!raw-loader!../Button/ButtonColor.svelte'
  import sourceSize  from '!!raw-loader!../Button/ButtonSize.svelte'
  import sourceIcon  from '!!raw-loader!../Button/ButtonWithIcon.svelte'
- import Example from '../Example.svelte'
+ import Example from '../../Example.svelte'
 
 </script>
 
-<Meta title="Bexis2/Button" 
+<Meta title="Bexis2/Frontend/Button" 
  component={Color}
 />
 

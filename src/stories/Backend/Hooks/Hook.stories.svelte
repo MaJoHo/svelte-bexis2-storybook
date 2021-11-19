@@ -1,6 +1,6 @@
 <script>
  import { Meta, Story } from '@storybook/addon-svelte-csf';
- import Example from '../Example.svelte'
+ import Example from '../../Example.svelte'
  import Hook from './hook.svelte'
  import sourceHook from '!!raw-loader!./hook.svelte'
  import sourceHookCSharp from '!!raw-loader!./hook.cs'
@@ -8,7 +8,7 @@
 
 </script>
 
-<Meta title="Bexis2/Hooks" component={Hook}/>
+<Meta title="Bexis2/Backend/Hooks" component={Hook}/>
 
  <Story name="hook default" >
   <Example 

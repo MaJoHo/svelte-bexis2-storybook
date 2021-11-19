@@ -3,7 +3,7 @@
  import PrismCode from './PrismCode.svelte'
  export let stacked = false;
  export let svelte;
- export let csharp ;
+ export let csharp;
  export let model;
  export let json;
  export let xml;
@@ -37,13 +37,15 @@
        <slot />
      </Col>
      {/if}
-     {#if svelte}
+     <!-- {#if svelte} only if  svelte component exist, then show the tab -->
        <Col md={stacked ? 12 : 7}>
         <!-- <h6 class="text-muted">CODE</h6> -->
         <TabContent pills >
+
           <TabPane tabId="svelte" tab="Svelte" active>
             <PrismCode class="language-html" >{svelte}</PrismCode>
           </TabPane>
+
           {#if json}
             <TabPane tabId="json" tab="JSON" >
               <PrismCode class="language-json" >{json}</PrismCode>
@@ -66,7 +68,7 @@
         {/if}
         </TabContent>
        </Col>
-     {/if}
+     <!-- {/if} -->
    </Row>
  </div>
 </div>

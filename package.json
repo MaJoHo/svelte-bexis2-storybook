@@ -8,9 +8,10 @@
     "start": "sirv public --no-clear",
     "storybook": "start-storybook -p 6006 -s ./public/",
     "build-storybook": "build-storybook",
-    "install bexis2 core ui": "npm install --save-dev C:\\Users\\admin\\AppData\\Roaming\\npm\\node_modules\\@bexis2\\svelte-bexis2-core-ui"
+    "install bexis2 core ui": "npm install --save-dev C:\\Users\\Martin_adm\\AppData\\Roaming\\npm\\node_modules\\@bexis2\\svelte-bexis2-core-ui"
   },
   "devDependencies": {
+    "@bexis2/svelte-bexis2-core-ui": "file:../../../../AppData/Roaming/npm/node_modules/@bexis2/svelte-bexis2-core-ui",
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-node-resolve": "^11.0.0",
     "@storybook/addon-actions": "^6.3.6",
@@ -28,7 +29,6 @@
     "svelte-loader": "^3.1.2"
   },
   "dependencies": {
-    "@bexis2/svelte-bexis2-core-ui": "0.0.4",
     "@fortawesome/fontawesome-free": "^5.15.3",
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",

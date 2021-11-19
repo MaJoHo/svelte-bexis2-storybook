@@ -5,9 +5,9 @@
  import Color from './ButtonColor.svelte'
  import Size from './ButtonSize.svelte'
  import Icon from './ButtonWithIcon.svelte'
- import sourceColor  from '!!raw-loader!../Button/ButtonColor.svelte'
- import sourceSize  from '!!raw-loader!../Button/ButtonSize.svelte'
- import sourceIcon  from '!!raw-loader!../Button/ButtonWithIcon.svelte'
+ import sourceColor  from '!!raw-loader!./ButtonColor.svelte'
+ import sourceSize  from '!!raw-loader!./ButtonSize.svelte'
+ import sourceIcon  from '!!raw-loader!./ButtonWithIcon.svelte'
  import Example from '../../Example.svelte'
 
 </script>
